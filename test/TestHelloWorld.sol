@@ -15,7 +15,9 @@ contract TestHelloWorld {
     function testGreet2() public{
         HelloWorld hello = new HelloWorld();
         string memory test = "nidaye";
-        Assert.equal(hello.greet(test),"nidaye2","这个输入输出不相等");
+        Assert.notEqual(hello.greet(test),"nidaye2","这个输入输出不相等");
     }
+
+    
 
 }

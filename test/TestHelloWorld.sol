@@ -18,6 +18,10 @@ contract TestHelloWorld {
         Assert.notEqual(hello.greet(test),"nidaye2","这个输入输出不相等");
     }
 
+    function testByteArray() public{
+        bytes2[2] memory b1 = [bytes2(1),bytes2(2)];
+        Assert.equal(b1[0],bytes2(1),"b1[0] == 1"); //类型不同也不会相等
+    }
     
 
 }
